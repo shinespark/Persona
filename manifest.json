@@ -1,0 +1,30 @@
+{
+  "name": "Backstage",
+  "version": "0.1",
+  "description": "change the background-color for devlopment environment.",
+  "author": "yuzuemon",
+
+  "icons": {
+    "128": "img/icon.png"
+  },
+
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/backstage.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webRequest",
+    "*://*/"
+  ],
+  "web_accessible_resources": ["img/development.png", "img/classified.png"],
+  "manifest_version": 2
+}

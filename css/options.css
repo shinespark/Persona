@@ -1,0 +1,5 @@
+.matching-rule select,
+.matching-rule div {
+  margin-right: 3px;
+  float: left;
+}
